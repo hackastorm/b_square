@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>StripePaymentController</members>
+        <members>Stripe_Charge</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>StripePayment</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Contact.StripeId__c</members>
+        <members>Contact.Total_Amount_Charged__c</members>
+        <members>Payment_Details__c.Amount__c</members>
+        <members>Payment_Details__c.Card_Number__c</members>
+        <members>Payment_Details__c.Charge_Id__c</members>
+        <members>Payment_Details__c.Contact__c</members>
+        <members>Payment_Details__c.Receipt_URL__c</members>
+        <members>Stripe_Details__c.value__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Payment_Details__c</members>
+        <members>Stripe_Details__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>unfiled$public</members>
+        <members>unfiled$public/Reciept</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>Callout__c-Callout Layout</members>
+        <members>DML__c-DML Layout</members>
+        <members>Journey__c-Journey Layout</members>
+        <members>Object__c-Object Layout</members>
+        <members>SOQL__c-SOQL Layout</members>
+        <members>SOSL__c-SOSL Layout</members>
+        <members>Track_Debug__c-Track Debug Layout</members>
+        <members>Trigger__c-Trigger Layout</members>
+        <members>User_Debug__c-User Debug Layout</members>
+        <members>Workflow__c-Workflow Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Correct</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Payment_Details__c</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>Payment_Details__c.Sending_succsful_payment_reciept</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>Payment_Details__c.Send_reciept</members>
+        <name>WorkflowRule</name>
+    </types>
+    <version>45.0</version>
+</Package>

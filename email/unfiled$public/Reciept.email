@@ -1,0 +1,6 @@
+<body>
+Hello,
+Your payment is successful.
+Please click the link below for the payment reciept.
+<a href="{!Payment_Details__c.Receipt_URL__c}">here</a>
+</body>

@@ -1,0 +1,44 @@
+<apex:page controller="StripePaymentController" showHeader="false" sidebar="false">
+<style>
+.center{
+    border-style: outset;
+    width: max-content;
+    height: 25%;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'PT Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 26px;
+}
+fieldset{
+    width: max-content;
+}
+</style>
+<script>
+    function disable(){
+    var x = document.getElementsByClassName("paymbtn")[0];
+    x.disabled = true;
+    x.style.color =  'gainsboro';
+    console.log('here');
+    }
+</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
+    <apex:form >
+    <div class="center">
+        <apex:selectRadio value="{!cust}">
+            <apex:selectOptions value="{!items}" />
+        </apex:selectRadio>
+        <apex:outputLabel value="Amount"/>&nbsp;&nbsp;<apex:outputLabel styleclass="fa fa-credit-card"/>&nbsp;&nbsp;<apex:inputText value="{!amount}"/>
+        <apex:commandButton styleclass="paymbtn" style="margin-left:50px" value="Make Payment" action="{!makePayment}" reRender="success" onclick="disable();"/>
+        <apex:outputPanel rendered="{!success}" id="success">
+            <apex:image url="{!$Resource.Correct}" />
+        </apex:outputPanel>
+    </div>
+    </apex:form>
+</apex:page>
